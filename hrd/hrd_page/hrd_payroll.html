@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll - HRD</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../hrd_style/hrd.css">
+</head>
+<body>
+
+    <div class="page-container">
+        <aside class="sidebar">
+            <h1 class="app-name">HRConnect</h1>
+            <ul class="sidebar-menu">
+                <li><a href="hrd_dashboard.html" class="menu-item"><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a></li>
+                <li><a href="hrd_leave.html" class="menu-item"><i class="fa-solid fa-calendar-alt"></i> Cuti</a></li>
+                <li><a href="hrd_payroll.html" class="menu-item active"><i class="fa-solid fa-file-invoice-dollar"></i> Payroll</a></li>
+                <li><a href="hrd_businesstrip.html" class="menu-item"><i class="fa-solid fa-plane-departure"></i> Perjalanan Bisnis</a></li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <nav class="navbar">
+                <div class="navbar-title">Manajemen Gaji</div>
+            </nav>
+
+            <main class="content-area">
+                <section id="payroll" class="content-section">
+                    <form class="card-form" id="gaji-form">
+                        <h2>Formulir Input Gaji Karyawan</h2>
+                        <div class="form-group">
+                            <label for="gaji-nama">Nama Karyawan</label>
+                            <input type="text" id="gaji-nama"  required>
+                        </div>
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="gaji-role-divisi">Role & Divisi</label>
+                                <input type="text" id="gaji-role-divisi" placeholder="Contoh: Supervisor Tim Rekrutmen" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gaji-tanggal">Tanggal Jatuh Tempo</label>
+                                <input type="date" id="gaji-tanggal" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="gaji-nominal">Nominal Gaji (Rp)</label>
+                            <input type="number" id="gaji-nominal" required>
+                        </div>
+                        <button type="submit" class="submit-button">Simpan Data Gaji</button>
+                    </form>
+
+                    <div class="leave-widget">
+                        <h3>Riwayat Input Gaji</h3>
+                        <table class="leave-table">
+                            <thead>
+                                <tr>
+                                    <th>Nama Karyawan</th>
+                                    <th>Role & Divisi</th>
+                                    <th>Jatuh Tempo</th>
+                                    <th>Nominal Gaji</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="gaji-table-body">
+                                <tr>
+                                    <td>Haidar</td>
+                                    <td>Supervisor: Tim Rekrutmen</td>
+                                    <td>25 Nov 2025</td>
+                                    <td>Rp 7.500.000</td>
+                                    <td><span class="status-tag status-paid">Tersimpan</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <div id="success-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h2>Berhasil!</h2>
+            <p>Data gaji karyawan telah berhasil disimpan.</p>
+            <button id="modal-close-btn" class="submit-button">OK</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../hrd_js/hrd_payroll.js"></script>
+
+</body>
+</html>
