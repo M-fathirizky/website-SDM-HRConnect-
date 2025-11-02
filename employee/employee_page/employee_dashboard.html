@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../employee_style/employee.css">
+</head>
+<body>
+
+    <div class="page-container">
+        <aside class="sidebar">
+            <h1 class="app-name">HRConnect</h1>
+            <ul class="sidebar-menu">
+                <li><a href="employee_dashboard.html" class="menu-item active"><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a></li>
+                <li><a href="employee_leave.html" class="menu-item"><i class="fa-solid fa-calendar-alt"></i> Cuti</a></li>
+                <li><a href="employee_payroll.html" class="menu-item"><i class="fa-solid fa-file-invoice-dollar"></i> Payroll</a></li>
+                <li><a href="employee_businesstrip.html" class="menu-item"><i class="fa-solid fa-plane-departure"></i> Perjalanan Bisnis</a></li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <nav class="navbar">
+                <div class="navbar-title">Employee Dashboard</div>
+                <a href="#" class="logout-button">
+                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                </a>
+            </nav>
+
+            <main class="content-area">
+                <section id="dashboard" class="content-section">
+                    <div class="profile-header">
+                        <div class="profile-pic">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="welcome-text">
+                            <h2>Hola, Fathir!</h2>
+                            <p>Enjoy your life and stay motivated!</p>
+                        </div>
+                    </div>
+
+                    <div class="widget full-width-widget">
+                        <h3>Daftar Tugas Anda</h3>
+                        <ul class="task-list">
+                            <li class="task-item">
+                                <div class="task-info">
+                                    <p class="task-name">Pemeriksaan Blok Panen</p>
+                                    <p class="task-status">Sedang Berjalan</p>
+                                </div>
+                                <div class="task-progress">
+                                    <div class="progress-bar-container">
+                                        <div class="progress-bar in-progress"></div>
+                                    </div>
+                                    <span>80%</span>
+                                </div>
+                            </li>
+                            <li class="task-item">
+                                <div class="task-info">
+                                    <p class="task-name">Monitoring Pupuk Organik</p>
+                                    <p class="task-status">Selesai</p>
+                                </div>
+                                <div class="task-progress">
+                                    <div class="progress-bar-container">
+                                        <div class="progress-bar completed"></div>
+                                    </div>
+                                    <span>100%</span>
+                                </div>
+                            </li>
+                            <li class="task-item">
+                                <div class="task-info">
+                                    <p class="task-name">Pendataan Tenaga Harian</p>
+                                    <p class="task-status">Belum Dimulai</p>
+                                </div>
+                                <div class="task-progress">
+                                    <div class="progress-bar-container">
+                                        <div class="progress-bar not-started"></div>
+                                    </div>
+                                    <span>0%</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="widget-grid">
+                        <div class="widget text-widget">
+                            <i class="widget-icon fa-solid fa-calendar-check"></i>
+                            <h3>Sisa Cuti Tahunan</h3>
+                            <p class="big-text"> 8 <span class="small-text">Hari</span></p>
+                        </div>
+
+                        <div class="widget">
+                            <i class="widget-icon fa-solid fa-plane-departure"></i>
+                            <h3>Jadwal Perjalanan Bisnis</h3>
+                            <ul class="info-list">
+                                <li><i class="list-icon fa-solid fa-calendar-day"></i><span>Rapat koordinasi manajemen regional - Pontianak</span> <strong>20 Sep 2025</strong></li>
+                                <li><i class="list-icon fa-solid fa-calendar-day"></i><span>Inspeksi Kualitas Hasil Panen - Sanggau</span> <strong>15 Nov 2025</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <div id="logout-confirmation-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fa-solid fa-circle-question" style="color: var(--warning-orange);"></i>
+            </div>
+            <h2>Konfirmasi Logout</h2>
+            <p>Apakah Anda yakin ingin keluar dari akun ini?</p>
+            <div class="modal-actions">
+                <button id="confirm-logout" class="btn-confirm-yes" style="background-color: var(--danger-red);">Ya, Keluar</button>
+                <button id="cancel-logout" class="btn-confirm-no">Batal</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../../login_page/logout_handler.js"></script>
+
+</body>
+</html>

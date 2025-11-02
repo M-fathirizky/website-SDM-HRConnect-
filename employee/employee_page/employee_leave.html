@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengajuan Cuti - Employee</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../employee_style/employee.css">
+
+</head>
+<body>
+
+    <div class="page-container">
+        <aside class="sidebar">
+            <h1 class="app-name">HRConnect</h1>
+            <ul class="sidebar-menu">
+                <li><a href="employee_dashboard.html" class="menu-item"><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a></li>
+                <li><a href="employee_leave.html" class="menu-item active"><i class="fa-solid fa-calendar-alt"></i> Cuti</a></li>
+                <li><a href="employee_payroll.html" class="menu-item"><i class="fa-solid fa-file-invoice-dollar"></i> Payroll</a></li>
+                <li><a href="employee_businesstrip.html" class="menu-item"><i class="fa-solid fa-plane-departure"></i> Perjalanan Bisnis</a></li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <nav class="navbar">
+                <div class="navbar-title">Pengajuan Cuti</div>
+            </nav>
+
+            <main class="content-area">
+                <section id="pengajuan-cuti" class="content-section">
+                    <form class="card-form">
+                        <h2>Formulir Pengajuan Cuti</h2>
+                        <div class="form-group">
+                            <label for="cuti-alasan">Keterangan / Alasan Cuti</label>
+                            <textarea id="cuti-alasan" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="cuti-mulai">Tanggal Mulai Cuti</label>
+                                <input type="date" id="cuti-mulai" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cuti-selesai">Tanggal Selesai Cuti</label>
+                                <input type="date" id="cuti-selesai" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-button">Ajukan Cuti</button>
+                    </form>
+
+                    <div class="history-widget">
+                        <h3>Riwayat Pengajuan Cuti</h3>
+                        <table class="history-table">
+                            <thead>
+                                <tr>
+                                    <th>Tanggal Mulai</th>
+                                    <th>Tanggal Selesai</th>
+                                    <th>Keterangan</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>15 Agu 2025</td>
+                                    <td>18 Agu 2025</td>
+                                    <td>Sakit</td>
+                                    <td><span class="status-tag status-approved">Disetujui</span></td>
+                                </tr>
+                                <tr>
+                                    <td>01 Des 2025</td>
+                                    <td>02 Des 2025</td>
+                                    <td>Keperluan keluarga</td>
+                                    <td><span class="status-tag status-pending">Menunggu</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <div id="success-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h2>Berhasil!</h2>
+            <p>Pengajuan cuti Anda telah berhasil dikirim.</p>
+            <button id="modal-close-btn" class="submit-button">OK</button>
+        </div>
+    </div>
+
+    <script src="../employee_js/employee_leave.js"></script>
+
+</body>
+</html>

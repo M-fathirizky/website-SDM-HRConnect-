@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../finance_style/finance.css">
+</head>
+<body>
+
+    <div class="page-container">
+        <aside class="sidebar">
+            <h1 class="app-name">HRConnect</h1>
+            <ul class="sidebar-menu">
+                <li><a href="finance_dashboard.html" class="menu-item active"><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a></li>
+                <li><a href="finance_leave.html" class="menu-item"><i class="fa-solid fa-calendar-alt"></i> Cuti</a></li>
+                <li><a href="finance_payroll.html" class="menu-item"><i class="fa-solid fa-file-invoice-dollar"></i> Payroll</a></li>
+                <li><a href="finance_businesstrip.html" class="menu-item"><i class="fa-solid fa-plane-departure"></i> Perjalanan Bisnis</a></li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <nav class="navbar">
+                <div class="navbar-title">Finance Dashboard</div>
+                <a href="#" class="logout-button">
+                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                </a>
+            </nav>
+
+            <main class="content-area">
+                <section id="dashboard" class="content-section">
+                    <!-- Profile Header -->
+                    <div class="profile-header">
+                        <div class="profile-pic">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="welcome-text">
+                            <h2>Hola, Naufal!</h2>
+                            <p>Enjoy your life and stay motivated!</p>
+                        </div>
+                    </div>
+
+                    <div class="cashflow-header">
+                        <div class="cashflow-item income">
+                            <div class="cashflow-icon">
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </div>
+                            <div class="cashflow-details">
+                                <h4>Total Pemasukan</h4>
+                                <p>Rp 1.250.000.000</p>
+                            </div>
+                        </div>
+                        <div class="cashflow-item expense">
+                            <div class="cashflow-icon">
+                                <i class="fa-solid fa-arrow-up"></i>
+                            </div>
+                            <div class="cashflow-details">
+                                <h4>Total Pengeluaran</h4>
+                                <p>Rp 875.500.000</p>
+                            </div>
+                        </div>
+                        <div class="cashflow-item balance">
+                            <div class="cashflow-icon">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </div>
+                            <div class="cashflow-details">
+                                <h4>Saldo Akhir</h4>
+                                <p>Rp 374.500.000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="widget full-width-widget">
+                    <h3>Cash Flow 6 Bulan Terakhir</h3>
+                    <div class="cashflow-legend">
+                        <span class="legend-item income-legend"><i class="fa-solid fa-square"></i> Pemasukan</span>
+                        <span class="legend-item expense-legend"><i class="fa-solid fa-square"></i> Pengeluaran</span>
+                    </div>
+                    <div class="cashflow-chart">
+                        <div class="chart-bar-group">
+                            <div class="bar-container">
+                                <div class="chart-bar income-bar" style="height: 80%;"><span class="bar-percentage">80%</span></div>
+                                <div class="chart-bar expense-bar" style="height: 60%;"><span class="bar-percentage">60%</span></div>
+                            </div>
+                            <span class="bar-label">Mei</span>
+                        </div>
+                        <div class="chart-bar-group">
+                            <div class="bar-container">
+                                <div class="chart-bar income-bar" style="height: 70%;"><span class="bar-percentage">70%</span></div>
+                                <div class="chart-bar expense-bar" style="height: 55%;"><span class="bar-percentage">55%</span></div>
+                            </div>
+                            <span class="bar-label">Jun</span>
+                        </div>
+                        <div class="chart-bar-group">
+                            <div class="bar-container">
+                                <div class="chart-bar income-bar" style="height: 90%;"><span class="bar-percentage">90%</span></div>
+                                <div class="chart-bar expense-bar" style="height: 75%;"><span class="bar-percentage">75%</span></div>
+                            </div>
+                            <span class="bar-label">Jul</span>
+                        </div>
+                        <div class="chart-bar-group">
+                            <div class="bar-container">
+                                <div class="chart-bar income-bar" style="height: 85%;"><span class="bar-percentage">85%</span></div>
+                                <div class="chart-bar expense-bar" style="height: 65%;"><span class="bar-percentage">65%</span></div>
+                            </div>
+                            <span class="bar-label">Ags</span>
+                        </div>
+                        <div class="chart-bar-group">
+                            <div class="bar-container">
+                                <div class="chart-bar income-bar" style="height: 95%;"><span class="bar-percentage">95%</span></div>
+                                <div class="chart-bar expense-bar" style="height: 80%;"><span class="bar-percentage">80%</span></div>
+                            </div>
+                            <span class="bar-label">Sep</span>
+                        </div>
+                        <div class="chart-bar-group">
+                            <div class="bar-container">
+                                <div class="chart-bar income-bar" style="height: 70%;"><span class="bar-percentage">70%</span></div>
+                                <div class="chart-bar expense-bar" style="height: 50%;"><span class="bar-percentage">50%</span></div>
+                            </div>
+                            <span class="bar-label">Okt</span>
+                        </div>
+                    </div>
+                    
+                    <div class="cashflow-details-summary">
+                        <div class="summary-column">
+                            <h4>Detail Pemasukan Utama</h4>
+                            <ul>
+                                <li><span><i class="fa-solid fa-circle"></i> Penjualan Tandan Buah Segar</span> <strong>65%</strong></li>
+                                <li><span><i class="fa-solid fa-circle"></i> Subsidi Operasional</span> <strong>25%</strong></li>
+                                <li><span><i class="fa-solid fa-circle"></i> Penjualan Limbah Sawit</span> <strong>10%</strong></li>
+                            </ul>
+                        </div>
+                        <div class="summary-column">
+                            <h4>Detail Pengeluaran Utama</h4>
+                            <ul>
+                                <li><span><i class="fa-solid fa-circle"></i> Gaji & Tunjangan Karyawan</span> <strong>50%</strong></li>
+                                <li><span><i class="fa-solid fa-circle"></i> Pembelian Pupuk & Peptisida</span> <strong>35%</strong></li>
+                                <li><span><i class="fa-solid fa-circle"></i> Biaya Operasional Kantor</span> <strong>15%</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="widget-grid">
+                        <div class="widget text-widget">
+                            <i class="widget-icon fa-solid fa-calendar-check"></i> <!-- Ikon dipindahkan ke sini -->
+                            <h3>Sisa Cuti Tahunan</h3>
+                            <p class="big-text">9 <span class="small-text">Hari</span></p> <!-- Teks utama -->
+                        </div>
+                        <div class="widget">
+                            <i class="widget-icon fa-solid fa-plane-departure"></i>
+                            <h3> Jadwal Perjalanan Bisnis </h3>
+                            <ul class="info-list">
+                                <li><i class="list-icon fa-solid fa-calendar-day"></i><span>Audit Keungan tahunan - Jakarta</span> <strong>09 Sep 2025</strong></li>
+                                <li><i class="list-icon fa-solid fa-calendar-day"></i><span>Pelatihan Sistem ERP baru - Medan</span> <strong>11 Okt 2025</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal Konfirmasi Logout -->
+    <div id="logout-confirmation-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fa-solid fa-circle-question" style="color: var(--warning-orange);"></i>
+            </div>
+            <h2>Konfirmasi Logout</h2>
+            <p>Apakah Anda yakin ingin keluar dari akun ini?</p>
+            <div class="modal-actions">
+                <button id="confirm-logout" class="btn-confirm-yes" style="background-color: var(--danger-red);">Ya, Keluar</button>
+                <button id="cancel-logout" class="btn-confirm-no">Batal</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../../login_page/logout_handler.js"></script>
+
+</body>
+</html>
