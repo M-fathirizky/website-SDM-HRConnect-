@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../admin_style/admin.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <aside class="sidebar">
+        <h1 class="app-name">HRConnect</h1>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="admin_dashboard.html" class="menu-item active"
+              ><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="admin_leave.html" class="menu-item"
+              ><i class="fa-solid fa-calendar-alt"></i> Cuti</a
+            >
+          </li>
+          <li>
+            <a href="admin_payroll.html" class="menu-item"
+              ><i class="fa-solid fa-file-invoice-dollar"></i> Payroll</a
+            >
+          </li>
+          <li>
+            <a href="admin_businesstrip.html" class="menu-item"
+              ><i class="fa-solid fa-plane-departure"></i> Perjalanan Bisnis</a
+            >
+          </li>
+        </ul>
+      </aside>
+
+      <div class="main-content">
+        <nav class="navbar">
+          <div class="navbar-title">Admin Dashboard</div>
+          <a href="#" class="logout-button">
+            <i class="fa-solid fa-right-from-bracket"></i> Logout
+          </a>
+        </nav>
+
+        <main class="content-area">
+          <section id="dashboard" class="content-section">
+            <div class="profile-header">
+              <div class="profile-pic">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="welcome-text">
+                <h2>Hola, Fizryan!</h2>
+                <p>Enjoy your life and stay motivated!</p>
+              </div>
+            </div>
+
+            <div class="widget full-width-widget">
+              <h3>Log Aktivitas Terbaru</h3>
+              <table class="activity-log-table">
+                <thead>
+                  <tr>
+                    <th>User</th>
+                    <th>Role</th>
+                    <th>Aktivitas</th>
+                    <th>Waktu</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Fathir</td>
+                    <td><span class="role-tag employee">Employee</span></td>
+                    <td>Mengajukan perjalanan bisnis</td>
+                    <td>Hari ini, 11:15</td>
+                  </tr>
+                  <tr>
+                    <td>Haidar</td>
+                    <td><span class="role-tag supervisor">Supervisor</span></td>
+                    <td>Menyetujui pengajuan perjalanan bisnis</td>
+                    <td>Hari ini, 09:45</td>
+                  </tr>
+                  <tr>
+                    <td>Naufal</td>
+                    <td><span class="role-tag finance">Finance</span></td>
+                    <td>Memproses reimburse untuk 'Fathir'</td>
+                    <td>Kemarin, 15:00</td>
+                  </tr>
+                  <tr>
+                    <td>Fizryan</td>
+                    <td><span class="role-tag hrd">HRD</span></td>
+                    <td>Menyimpan data gaji baru</td>
+                    <td>Kemarin, 11:30</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="widget-grid">
+              <div class="widget text-widget">
+                <i class="widget-icon fa-solid fa-users"></i>
+                <h3>Total Pengguna</h3>
+                <p class="big-text">15 <span class="small-text">Orang</span></p>
+              </div>
+              <div class="widget text-widget">
+                <i class="widget-icon fa-solid fa-calendar-check"></i>
+                <h3>Sisa Cuti Tahunan</h3>
+                <p class="big-text">6 <span class="small-text">Hari</span></p>
+              </div>
+              <div class="widget">
+                <i class="widget-icon fa-solid fa-plane-departure"></i>
+                <h3>Jadwal Perjalanan Bisnis</h3>
+                <ul class="info-list">
+                  <li>
+                    <i class="list-icon fa-solid fa-calendar-day"></i
+                    ><span
+                      >Sinkroniasi Data absensi antar kebun - Pontianak</span
+                    >
+                    <strong>14 Okt 2025</strong>
+                  </li>
+                  <li>
+                    <i class="list-icon fa-solid fa-calendar-day"></i
+                    ><span>Workshop sistem HR digital - Palangka Raya</span>
+                    <strong>18 Nov 2025</strong>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="widget full-width-widget" id="add-user-widget">
+              <h3>Tambah Pengguna Baru</h3>
+              <form
+                class="card-form"
+                id="add-user-form"
+                style="padding: 0; box-shadow: none; border-radius: 0"
+              >
+                <div class="form-group-row">
+                  <div class="form-group">
+                    <label for="user-name">Nama Pengguna</label>
+                    <input type="text" id="user-name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="user-role">Role</label>
+                    <select id="user-role" required>
+                      <option value="" disabled selected>Pilih Role</option>
+                      <option value="admin">Admin</option>
+                      <option value="hrd">HRD</option>
+                      <option value="supervisor">Supervisor</option>
+                      <option value="finance">Finance</option>
+                      <option value="employee">Employee</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="submit-button">
+                  Tambah Pengguna
+                </button>
+              </form>
+            </div>
+
+            <div class="widget full-width-widget">
+              <h3>Manajemen Pengguna</h3>
+              <table class="activity-log-table" id="user-management-table">
+                <thead>
+                  <tr>
+                    <th>Nama</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Fizryan</td>
+                    <td><span class="role-tag hrd">HRD</span></td>
+                    <td><span class="status-tag active">Aktif</span></td>
+                  </tr>
+                  <tr>
+                    <td>Haidar</td>
+                    <td><span class="role-tag supervisor">Supervisor</span></td>
+                    <td><span class="status-tag active">Aktif</span></td>
+                  </tr>
+                  <tr>
+                    <td>Naufal</td>
+                    <td><span class="role-tag finance">Finance</span></td>
+                    <td><span class="status-tag active">Aktif</span></td>
+                  </tr>
+                  <tr>
+                    <td>Fathir</td>
+                    <td><span class="role-tag employee">Employee</span></td>
+                    <td><span class="status-tag active">Aktif</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div id="logout-confirmation-modal" class="modal-overlay">
+      <div class="modal-content">
+        <div class="modal-icon">
+          <i
+            class="fa-solid fa-circle-question"
+            style="color: var(--warning-orange)"
+          ></i>
+        </div>
+        <h2>Konfirmasi Logout</h2>
+        <p>Apakah Anda yakin ingin keluar dari akun ini?</p>
+        <div class="modal-actions">
+          <button
+            id="confirm-logout"
+            class="btn-confirm-yes"
+            style="background-color: var(--danger-red)"
+          >
+            Ya, Keluar
+          </button>
+          <button id="cancel-logout" class="btn-confirm-no">Batal</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../admin_js/admin_manageuser.js"></script>
+    <script src="../../login_page/logout_handler.js"></script>
+  </body>
+</html>

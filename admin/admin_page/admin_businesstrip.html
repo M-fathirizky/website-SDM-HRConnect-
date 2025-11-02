@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengajuan Perjalanan Bisnis - Admin</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../admin_style/admin.css">
+</head>
+<body>
+
+    <div class="page-container">
+        <aside class="sidebar">
+            <h1 class="app-name">HRConnect</h1>
+            <ul class="sidebar-menu">
+                <li><a href="admin_dashboard.html" class="menu-item"><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a></li>
+                <li><a href="admin_leave.html" class="menu-item"><i class="fa-solid fa-calendar-alt"></i> Cuti</a></li>
+                <li><a href="admin_payroll.html" class="menu-item"><i class="fa-solid fa-file-invoice-dollar"></i> Payroll</a></li>
+                <li><a href="admin_businesstrip.html" class="menu-item active"><i class="fa-solid fa-plane-departure"></i>Perjalanan Bisnis</a></li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <nav class="navbar">
+                <div class="navbar-title">Pengajuan Perjalanan Bisnis</div>
+             </nav>
+            
+            <main class="content-area">
+                <section id="perjalanan-bisnis" class="content-section">
+                     <form class="card-form">
+                        <h2>Formulir Pengajuan Perjalanan Bisnis</h2>
+                        <div class="form-group">
+                            <label for="perjalanan-aktivitas">Aktivitas / Tujuan Perjalanan</label>
+                            <textarea id="perjalanan-aktivitas" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="perjalanan-mulai">Tanggal Mulai</label>
+                                <input type="date" id="perjalanan-mulai" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="perjalanan-selesai">Tanggal Selesai</label>
+                                <input type="date" id="perjalanan-selesai" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-button">Ajukan Perjalanan</button>
+                    </form>
+
+                    <div class="history-widget">
+                        <h3>Riwayat Pengajuan Perjalanan Bisnis</h3>
+                        <table class="history-table">
+                            <thead>
+                                <tr>
+                                    <th>Tanggal Mulai</th>
+                                    <th>Tanggal Selesai</th>
+                                    <th>Tujuan</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>14 Okt 2025</td>
+                                    <td>16 Okt 2025</td>
+                                    <td>Sinkroniasi Data absensi antar kebun - Pontianak</td>
+                                    <td><span class="status-tag status-approved">Disetujui</span></td>
+                                </tr>
+                                <tr>
+                                    <td>18 Nov 2025</td>
+                                    <td>19 Nov 2025</td>
+                                    <td>Workshop sistem HR digital - Palangka Raya</td>
+                                    <td><span class="status-tag status-approved">Disetujui</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <div id="success-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h2>Berhasil!</h2>
+            <p>Pengajuan perjalanan bisnis Anda telah berhasil dikirim.</p>
+            <button id="modal-close-btn" class="submit-button">OK</button>
+        </div>
+    </div>
+
+    <script src="../admin_js/admin_businesstrip.js"></script>
+
+</body>
+</html>

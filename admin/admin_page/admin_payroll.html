@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payroll - Admin</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../admin_style/admin.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <aside class="sidebar">
+        <h1 class="app-name">HRConnect</h1>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="admin_dashboard.html" class="menu-item"
+              ><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="admin_leave.html" class="menu-item"
+              ><i class="fa-solid fa-calendar-alt"></i> Cuti</a
+            >
+          </li>
+          <li>
+            <a href="admin_payroll.html" class="menu-item active"
+              ><i class="fa-solid fa-file-invoice-dollar"></i> Payroll</a
+            >
+          </li>
+          <li>
+            <a href="admin_businesstrip.html" class="menu-item"
+              ><i class="fa-solid fa-plane-departure"></i> Perjalanan Bisnis</a
+            >
+          </li>
+        </ul>
+      </aside>
+
+      <div class="main-content">
+        <nav class="navbar">
+          <div class="navbar-title">Reimbursement</div>
+        </nav>
+
+        <main class="content-area">
+          <section id="payroll" class="content-section">
+            <form class="card-form">
+              <h2>Formulir Pengajuan Reimburse</h2>
+              <div class="form-group">
+                <label for="reimburse-kegiatan">Keterangan Kegiatan</label>
+                <textarea id="reimburse-kegiatan" rows="5" required></textarea>
+              </div>
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="reimburse-tanggal">Tanggal Transaksi</label>
+                  <input type="date" id="reimburse-tanggal" required />
+                </div>
+                <div class="form-group">
+                  <label for="reimburse-nominal">Nominal (Rp)</label>
+                  <input type="number" id="reimburse-nominal" required />
+                </div>
+              </div>
+              <button type="submit" class="submit-button">
+                Ajukan Reimburse
+              </button>
+            </form>
+
+            <div class="history-widget">
+              <h3>Riwayat Pengajuan Reimburse</h3>
+              <table class="history-table">
+                <thead>
+                  <tr>
+                    <th>Tanggal Transaksi</th>
+                    <th>Keterangan</th>
+                    <th>Nominal</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>20 Okt 2025</td>
+                    <td>Pembelian ATK Kantor</td>
+                    <td>Rp 350.000</td>
+                    <td>
+                      <span class="status-tag status-approved">Disetujui</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>18 Okt 2025</td>
+                    <td>Transportasi meeting external</td>
+                    <td>Rp 150.000</td>
+                    <td>
+                      <span class="status-tag status-pending">Menunggu</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div id="success-modal" class="modal-overlay">
+      <div class="modal-content">
+        <div class="modal-icon">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <h2>Berhasil!</h2>
+        <p>Pengajuan reimburse Anda telah berhasil dikirim.</p>
+        <button id="modal-close-btn" class="submit-button">OK</button>
+      </div>
+    </div>
+
+    <script src="../admin_js/admin_payroll.js"></script>
+  </body>
+</html>
